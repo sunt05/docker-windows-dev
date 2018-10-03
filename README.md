@@ -1,2 +1,51 @@
 # docker-windows-dev
 Dockerfiles for mingw64&python-based development for Windows
+
+
+This Dockerfile is specifically designed for my personal mingw+python3 development for Windows targets on macOS platform.
+
+## 1. install Homebrew
+``` bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+## 2. install `Virtual Box` (free):
+``` bash
+brew cask install virtualbox
+```
+## 3. install `vagrant` for virtual machine management
+``` bash
+brew cask install vagrant
+```
+## 4. load a prebuilt windowsserver 2016 VM
+``` bash
+vagrant up 2016-box
+```
+## 5. install `Docker`
+``` bash
+brew install docker
+```
+
+## 6. List your new Docker machine
+``` bash
+docker-machine ls
+```
+
+## 7. switch to Windows docker environment
+``` bash
+eval $(docker-machine env 2016-box)
+```
+
+### if you need to switch back to macOS environment
+``` bash
+eval $(docker-machine env -unset)
+```
+
+## 8. use this Docker image (which will be automatically loaded from Docker Hub)
+```
+docker run -it -v C:$(pwd):C:/io sunt05/windows-dev powershell
+```
+
+### 8.1 all necessary mingw binaries haved been added to `%PATH%`, some essential ones are listed below:
+  * `make` (in fact a renamed copy of `mingw32-make` for easier access)
+  * `gcc`+`gfortran`
+  * `python3`+`numpy`
