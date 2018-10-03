@@ -22,7 +22,7 @@ brew cask install vagrant
 ``` bash
 git clone https://github.com/StefanScherer/windows-docker-machine
 cd windows-docker-machine
-vagrant up 2016-box
+vagrant up --provider virtualbox 2016-box
 ```
 ## 5. install `Docker`
 ``` bash
