@@ -18,8 +18,10 @@ brew cask install virtualbox
 ``` bash
 brew cask install vagrant
 ```
-## 4. load a prebuilt windowsserver 2016 VM
+## 4. load a prebuilt VM Windows Server 2016 (10.0.14393 LTS channel)
 ``` bash
+git clone https://github.com/StefanScherer/windows-docker-machine
+cd windows-docker-machine
 vagrant up 2016-box
 ```
 ## 5. install `Docker`
