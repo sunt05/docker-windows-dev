@@ -1,8 +1,10 @@
 # docker-windows-dev
-Dockerfiles for mingw64&python-based development for Windows
+Dockerfile for mingw64&python-based development for Windows
 
 
 This Dockerfile is specifically designed for my personal mingw+python3 development for Windows targets on macOS platform.
+
+# Quickstart for Windows-targeted development on macOS with `mingw`+`python3`
 
 ## 1. install Homebrew
 ``` bash
