@@ -49,7 +49,7 @@ eval $(docker-machine env -unset)
 docker run -it -v C:$(pwd):C:/io sunt05/windows-dev powershell
 ```
 
-### 8.1 all necessary mingw binaries haved been added to `%PATH%`, some essential ones are listed below:
+### all necessary mingw binaries haved been added to `%PATH%`, some essential ones are listed below:
   * `make` (in fact a renamed copy of `mingw32-make` for easier access)
   * `gcc`+`gfortran`
   * `python3`+`numpy`
