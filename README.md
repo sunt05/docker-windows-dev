@@ -51,3 +51,8 @@ docker run -it -v C:$(pwd):C:/io sunt05/windows-dev powershell
   * `make` (in fact a renamed copy of `mingw32-make` for easier access)
   * `gcc`+`gfortran`
   * `python3`+`numpy`
+
+
+## References:
+1. [StefanScherer/windows-docker-machine](https://github.com/StefanScherer/windows-docker-machine)
+2. [mback2k/docker-windows-buildbot-msys2](https://github.com/mback2k/docker-windows-buildbot-msys2)
